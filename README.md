@@ -9,3 +9,17 @@ Built with:
 - jQuery - DOM traversing
 - Grunt - Task runner
 - Font awesome - Icons
+
+To install:
+```shell
+npm install
+npm install -g grunt-cli
+npm build
+```
+
+Features:
+- Accessible
+  - Use keyboard to tab through controls
+  - Controls will respond to screen readers
+  - Stop and start using click or keyboard
+
