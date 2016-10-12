@@ -1,0 +1,26 @@
+{
+  "name": "adobe-carousel",
+  "version": "1.0.0",
+  "description": "Carousel will display photos in a carousel from a specific (physical) location using Flickr's API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "handlebars": "^4.0.5",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.5.2",
+    "underscore": "^1.8.3"
+  }
+}
