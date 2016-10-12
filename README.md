@@ -23,7 +23,7 @@ Features:
   - Use keyboard to tab through controls
   - Controls will respond to screen readers
   - Stop and start using click or keyboard
-- Customize carouselSettings varible to change:
+- Customize carouselSettings variable to change:
  - Slide interval
  - Number of images to pull and display
  - Title
