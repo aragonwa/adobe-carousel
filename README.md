@@ -10,11 +10,12 @@ Built with:
 - Grunt - Task runner
 - Font awesome - Icons
 
-To install:
+To build:
 ```shell
+Install Node
 npm install
 npm install -g grunt-cli
-npm build
+npm grunt build
 ```
 
 Features:
