@@ -23,8 +23,8 @@ Features:
   - Use keyboard to tab through controls
   - Controls will respond to screen readers
   - Stop and start using click or keyboard
-- Customize carouselSettings varible to:
- - Slide change interval
+- Customize carouselSettings varible to change:
+ - Slide interval
  - Number of images to pull and display
  - Title
- - Start with autorotate
+ - Autorotate at launch
