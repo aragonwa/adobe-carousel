@@ -1,10 +1,9 @@
 'use strict';
 
-// Using revealing module pattern http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html
+// Using revealing module pattern
 window.Carousel = (function ($) {
 
   // Initial settings for carousel
-  // If passed in through
   var carouselSettings = {
     carouselDiv: '#carousel-holder',
     $slides: '',
@@ -43,7 +42,7 @@ window.Carousel = (function ($) {
   }
 
   /**
-  * Ajax call Flickr API
+  * Ajax call from Flickr API
   */
   function getImages(){
     $.getJSON(
@@ -65,7 +64,7 @@ window.Carousel = (function ($) {
   * @param {object} data - Data from API call
   */
   function parseData(data){
-    // Find the number of pictures to display in carousel
+    // Get the number of pictures to display in carousel
     var numPics = numPicsToDisplay(data.photos.photo.length);
 
     // Array of images that will be used in templates
@@ -75,13 +74,13 @@ window.Carousel = (function ($) {
       images.push(data.photos.photo[val]);
       // Add title to each object
       // Photo title data was unreliable so I hard coded this title
-      // For production, find a way to wash API title data
+      // TODO: find a way to wash API title data
       images[index].title = carouselSettings.title;
     });
     // Build templates using Handlebars
     buildTemplates(images);
     // Attached slides to slides variable
-    // This var is used in attachHandlers function
+    // This is used in attachHandlers function
     carouselSettings.$slides = $('#slides .slide');
     // Attach handlers
     attachHandlers();
@@ -180,7 +179,6 @@ window.Carousel = (function ($) {
   */
   function numPicsToDisplay(picsLength) {
     // Check if number of pics that come back is less than settings for numPics
-    // Error check to make sure 
     var NUM_PICS = (picsLength < carouselSettings.numPics) ? picsLength : carouselSettings.numPics;
     var arr = [];
     while(arr.length < NUM_PICS) {
