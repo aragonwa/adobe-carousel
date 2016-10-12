@@ -134,10 +134,10 @@ window.Carousel = (function ($) {
     });
     $startStop.keypress(function(e) {
       if(e.which === 13) {
-        if(pause.css('display') === 'none') {
-          play.click();
+        if($pause.css('display') === 'none') {
+          $play.click();
         } else {
-          pause.click();
+          $pause.click();
         }
       }
     });
