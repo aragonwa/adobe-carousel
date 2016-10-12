@@ -119,7 +119,9 @@ window.Carousel = (function ($) {
     $controlLeft.click(function(){
       clearInterval(slideInterval);
       moveSlide('prev');
-      slideInterval = setInterval(function(){moveSlide('next')}, carouselSettings.slideInterval);
+      if($play.css('display') === 'none') {
+        slideInterval = setInterval(function(){moveSlide('next')}, carouselSettings.slideInterval);
+      }
     });
     $controlRight.keypress(function(e) {
       if(e.which === 13) {
@@ -129,7 +131,9 @@ window.Carousel = (function ($) {
     $controlRight.click(function(){
       clearInterval(slideInterval);
       moveSlide('next');
-      slideInterval = setInterval(function(){moveSlide('next')}, carouselSettings.slideInterval);
+      if($play.css('display') === 'none') {
+        slideInterval = setInterval(function(){moveSlide('next')}, carouselSettings.slideInterval);
+      }
     });
     $startStop.keypress(function(e) {
       if(e.which === 13) {
